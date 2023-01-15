@@ -58,6 +58,8 @@ public class SurveyService {
 	public List<Question> retrieveQuestionBySurveyId(String surveyId) {
 		
 		Survey survey = retrieveSurveyById(surveyId);
+		
+		if(survey==null) return null;
 		return survey.getQuestions();
 	}
 
